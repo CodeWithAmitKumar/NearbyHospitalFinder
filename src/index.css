@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-main-gradient text-gray-900 antialiased;
+  }
+
+  body.dark {
+    @apply bg-gray-900 text-gray-100; /* Dark background and light text for dark mode */
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply shadow-lg;
+  }
+
+  body.dark .navbar {
+    @apply bg-gray-800; /* Darker navbar for dark mode */
+  }
+
+  body.dark .navbar h1 {
+    @apply text-gray-100; /* Light text for dark mode */
+  }
+}
