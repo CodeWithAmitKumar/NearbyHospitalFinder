@@ -13,8 +13,7 @@ dist-ssr
 *.local
 
 
-#adding env file 
-.env
+
 
 # Editor directories and files
 .vscode/*
@@ -27,4 +26,5 @@ dist-ssr
 *.sln
 *.sw?
 
+.env
 
