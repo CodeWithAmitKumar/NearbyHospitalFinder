@@ -3,9 +3,9 @@ import { Hospital } from '../types/hospital';
 export const hospitals: Hospital[] = [
   {
     id: '1',
-    name: 'Central Memorial Hospital',
+    name: 'Jyoti Hospital',
     address: '123 Healthcare Ave, Medical District',
-    city: 'New York',
+    city: 'Balasore',
     distance: 0.8,
     rating: 4.8,
     specialties: ['Emergency Care', 'Cardiology', 'Neurology'],
