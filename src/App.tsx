@@ -1,4 +1,3 @@
-// src/App.tsx
 import { useMemo, useState } from 'react';
 import { Filters } from './components/Filters';
 import { HospitalCard } from './components/HospitalCard';

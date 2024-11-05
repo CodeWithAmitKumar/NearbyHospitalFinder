@@ -1,3 +1,4 @@
+// src/data/hospitals.ts
 import { Hospital } from '../types/hospital';
 
 export const hospitals: Hospital[] = [
@@ -6,7 +7,7 @@ export const hospitals: Hospital[] = [
     name: 'Jyoti Hospital',
     address: '123 Healthcare Ave, Medical District',
     city: 'Balasore',
-    distance: 0.8,
+    distance: 0.8,  // in kilometers
     rating: 4.8,
     specialties: ['Emergency Care', 'Cardiology', 'Neurology'],
     emergency: true,
@@ -19,7 +20,7 @@ export const hospitals: Hospital[] = [
     name: 'St. Mary\'s Medical Center',
     address: '456 Wellness Blvd, Healing Quarter',
     city: 'Boston',
-    distance: 1.2,
+    distance: 1.2,  // in kilometers
     rating: 4.6,
     specialties: ['Pediatrics', 'Orthopedics', 'Oncology'],
     emergency: true,
@@ -32,7 +33,7 @@ export const hospitals: Hospital[] = [
     name: 'Riverside Community Hospital',
     address: '789 Care Lane, Riverside',
     city: 'Chicago',
-    distance: 2.5,
+    distance: 2.5,  // in kilometers
     rating: 4.4,
     specialties: ['Family Medicine', 'Surgery', 'Mental Health'],
     emergency: false,
@@ -45,7 +46,7 @@ export const hospitals: Hospital[] = [
     name: 'Metropolitan General Hospital',
     address: '321 Health Street',
     city: 'New York',
-    distance: 1.5,
+    distance: 1.5,  // in kilometers
     rating: 4.7,
     specialties: ['Emergency Care', 'Surgery', 'Pediatrics'],
     emergency: true,
