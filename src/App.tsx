@@ -35,11 +35,11 @@ function App() {
   }, [searchQuery, cityQuery, filters]);
 
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-main-gradient'}`}>
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-main-gradient text-gray-900'}`}>
       <Navbar />
-      <main className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>
+      <main className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-1 space-y-6">
+          <div className={`lg:col-span-1 space-y-6 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
             <SearchBar 
               searchQuery={searchQuery}
               onSearchChange={setSearchQuery}
@@ -50,16 +50,16 @@ function App() {
               filters={filters}
               onFilterChange={setFilters}
             />
-            <div className={`bg-white p-4 rounded-lg shadow-md ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+            <div className={`p-4 rounded-lg shadow-md ${theme === 'dark' ? 'bg-gray-700' : 'bg-blue'}`}>
               <h2 className={`text-lg font-semibold mb-2 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>Quick Stats</h2>
               <div className="grid grid-cols-2 gap-4">
-                <div className={`text-center p-3 ${theme === 'dark' ? 'bg-secondary text-white' : 'bg-primary text-white'} rounded-lg`}>
+                <div className={`text-center p-3 ${theme === 'dark' ? 'bg-secondary' : 'bg-primary'} text-white rounded-lg`}>
                   <div className="text-2xl font-bold">
                     {filteredHospitals.length}
                   </div>
                   <div className="text-sm">Hospitals Found</div>
                 </div>
-                <div className={`text-center p-3 ${theme === 'dark' ? 'bg-secondary text-white' : 'bg-secondary text-white'} rounded-lg`}>
+                <div className={`text-center p-3 ${theme === 'dark' ? 'bg-secondary' : 'bg-secondary'} text-white rounded-lg`}>
                   <div className="text-2xl font-bold">
                     {filteredHospitals.filter(h => h.emergency).length}
                   </div>
@@ -69,7 +69,7 @@ function App() {
             </div>
           </div>
 
-          <div className="lg:col-span-2 space-y-6">
+          <div className={`lg:col-span-2 space-y-6 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
             <MapPlaceholder 
               hospitals={filteredHospitals}
               selectedHospital={selectedHospital}

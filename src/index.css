@@ -1,14 +1,16 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-main-gradient text-gray-900 antialiased;
+    @apply antialiased transition-colors duration-300; /* Smooth transition */
   }
 
+  /* Dark mode styles */
   body.dark {
-    @apply bg-gray-900 text-gray-100; /* Dark background and light text for dark mode */
+    @apply bg-gray-900 text-gray-100;
   }
 }
 
@@ -17,11 +19,11 @@
     @apply shadow-lg;
   }
 
-  body.dark .navbar {
-    @apply bg-gray-800; /* Darker navbar for dark mode */
+  input[type="checkbox"] {
+    @apply w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2;
   }
 
-  body.dark .navbar h1 {
-    @apply text-gray-100; /* Light text for dark mode */
+  select {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary;
   }
 }

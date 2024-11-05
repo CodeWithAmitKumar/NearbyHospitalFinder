@@ -1,5 +1,5 @@
 // src/contexts/ThemeContext.tsx
-import React, { createContext, ReactNode, useContext, useState } from 'react';
+import React, { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 
 type ThemeContextType = {
   theme: 'light' | 'dark';
@@ -13,9 +13,13 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-    const body = document.body;
-    body.classList.toggle('dark', theme === 'light');
   };
+
+  // Apply class to the body whenever theme changes
+  useEffect(() => {
+    const body = document.body;
+    body.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
