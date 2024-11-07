@@ -8,7 +8,7 @@ interface FiltersProps {
 }
 
 export function Filters({ filters, onFilterChange }: FiltersProps) {
-  const specialties = ['All', 'Emergency Care', 'Cardiology', 'Pediatrics', 'Surgery'];
+  const specialties = ['All', 'Emergency Care', 'Cardiology', 'Pediatrics', 'Surgery', 'Neurology'];
   const { theme } = useTheme(); // Access the current theme
 
   return (
